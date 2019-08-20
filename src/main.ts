@@ -79,6 +79,10 @@ async function FindMSBuild(pathToVSWhere:string):Promise<string>{
   var vsWhereExe = path.join(pathToVSWhere, "vswhere.exe");
   await exec.exec(vsWhereExe, ['-latest', '-requires', 'Microsoft.Component.MSBuild', '-find', 'MSBuild\\**\\Bin\\MSBuild.exe'], options);
 
+  if(msBuildPath === ""){
+    core.setFailed("Unable to find MSBuild.exe");
+  }
+
   var folderForMSBuild = path.dirname(msBuildPath)
   core.debug(`MSBuild = ${msBuildPath}`);
   core.debug(`Folder for MSBuild ${folderForMSBuild}`);
