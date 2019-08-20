@@ -1,10 +1,9 @@
-name: 'Node 12 Template Action'
-description: 'Get started with Node actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Setup MSBuild.exe'
+description: 'Uses VSWhere.exe to locate latest MSBuild & put it into the PATH'
+author: 'Warren Buckley'
 runs:
   using: 'node12'
   main: 'lib/main.js'
+branding:
+  icon: 'download'
+  color: 'purple'
