@@ -1,4 +1,3 @@
-
 # setup-CSC
 
 This action sets up csc.exe as a CLI tool for use in actions by:
