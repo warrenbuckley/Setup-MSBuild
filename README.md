@@ -1,9 +1,9 @@
 
-# setup-MSBuild
+# setup-CSC
 
-This action sets up MSBuild.exe as a CLI tool for use in actions by:
-- optionally downloading and caching a version of VSWhere.exe to help find the latest MSBuild on the machine
-- Adds the location of the MSBuild to the PATH
+This action sets up csc.exe as a CLI tool for use in actions by:
+- optionally downloading and caching a version of VSWhere.exe to help find the latest CSC on the machine
+- Adds the location of the CSC to the PATH
 
 
 # Usage
@@ -20,12 +20,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Setup csc.exe
+      uses: yoavain/Setup-CSC@v1
 
-    - name: MSBuild
+    - name: CSC
       working-directory: src
-      run: msbuild MyProject.csproj
+      run: csc source.cs
 ```
 
 
