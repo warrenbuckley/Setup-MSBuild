@@ -1,6 +1,6 @@
-name: 'Setup MSBuild.exe'
-description: 'Uses VSWhere.exe to locate latest MSBuild & put it into the PATH'
-author: 'Warren Buckley'
+name: 'Setup CSC.exe'
+description: 'Uses VSWhere.exe to locate latest CSC & put it into the PATH'
+author: 'yoavain'
 runs:
   using: 'node12'
   main: 'lib/main.js'
