@@ -31,11 +31,17 @@
     "@types/jest": "^24.x.x",
     "@types/node": "^12.x.x",
     "@types/semver": "^6.x.x",
+    "husky": "^3.x.x",
     "jest": "^24.x.x",
     "jest-circus": "^24.x.x",
     "ts-jest": "^24.x.x",
     "typescript": "^3.x.x",
     "webpack": "^4.x.x",
     "webpack-cli": "^3.x.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run test"
+    }
   }
 }
