@@ -13,7 +13,7 @@ async function run() {
     // However we need to download & use VSWhere to tell us
     // where CSC is so we can add it that dir to the PATH
 
-    // Tripple check it's Windows process
+    // Triple check it's Windows process
     let cscPath;
 // Can't install VSWhere.exe for Ubuntu image etc..
     const IS_WINDOWS = process.platform === 'win32';
