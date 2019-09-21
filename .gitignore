@@ -2,3 +2,5 @@ node_modules/
 __tests__/runner/*
 /.idea/
 /*.iml
+compiled/
+/.npmrc
