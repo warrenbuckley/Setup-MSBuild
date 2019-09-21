@@ -15,5 +15,8 @@ module.exports = {
 	plugins: [
 		new webpack.IgnorePlugin(/\.(css|less)$/)
 	],
+	optimization: {
+		minimize: false
+	},
 	devtool: 'sourcemap'
 };
