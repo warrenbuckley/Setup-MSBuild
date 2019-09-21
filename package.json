@@ -5,7 +5,7 @@
   "description": "Node 12 template action",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && webpack",
     "test": "jest"
   },
   "repository": {
@@ -34,6 +34,8 @@
     "jest": "^24.x.x",
     "jest-circus": "^24.x.x",
     "ts-jest": "^24.x.x",
-    "typescript": "^3.x.x"
+    "typescript": "^3.x.x",
+    "webpack": "^4.x.x",
+    "webpack-cli": "^3.x.x"
   }
 }
