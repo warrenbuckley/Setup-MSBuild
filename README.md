@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Setup csc.exe
-      uses: yoavain/Setup-CSC@v4
+      uses: yoavain/Setup-CSC@v5
 
     - name: CSC
       working-directory: src
