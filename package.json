@@ -21,9 +21,9 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.x.x",
-    "@actions/io": "^1.x.x",
     "@actions/exec": "^1.x.x",
     "@actions/github": "^1.x.x",
+    "@actions/io": "^1.x.x",
     "@actions/tool-cache": "^1.x.x",
     "semver": "^6.x.x"
   },
