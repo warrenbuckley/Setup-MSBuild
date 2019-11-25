@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Setup MSBuild.exe
+    - name: Setup VS2019
       uses: warrenbuckley/Setup-MSBuild@v1
 
     - name: MSBuild

@@ -1,4 +1,4 @@
-name: 'Setup MSBuild.exe'
+name: 'Setup VS2019'
 description: 'Uses VSWhere.exe to locate latest MSBuild & put it into the PATH'
 author: 'Warren Buckley'
 runs:
