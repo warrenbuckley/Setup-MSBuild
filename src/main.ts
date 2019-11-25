@@ -86,6 +86,25 @@ async function FindMSBuild(pathToVSWhere:string):Promise<string>{
   var folderForMSBuild = path.dirname(msBuildPath)
   core.debug(`MSBuild = ${msBuildPath}`);
   core.debug(`Folder for MSBuild ${folderForMSBuild}`);
+  
+  var vs2019Path = "";
+
+  const options2:ExecOptions = {};
+  options2.listeners = {
+    stdout: (data: Buffer) => {
+      var output = data.toString();
+      vs2019Path += output;
+    }
+  };
+
+  await exec.exec(vsWhereExe, ['-property', 'installationPath', '-prerelease', '-version', '(16.0^,19.0^)'], options2);
+  
+  if(vs2019Path === ""){
+    core.setFailed("Unable to find VS2019");
+  } else {
+    await exec.exec(`${vs2019Path}\\VC\\Auxiliary\\Build\\vcvars${process.env.platform === 'x64' ? '64' : '32'}.bat`)
+    core.debug(`setup vs 2019 environment`);
+  }
 
   return folderForMSBuild;
 }
